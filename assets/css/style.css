@@ -1,0 +1,123 @@
+*{
+    text-decoration: none;
+}
+body{
+    background: #CACFD6;
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: center; */
+    color: #424874;
+    margin: 0;
+}
+.home-page{
+    display: flex;
+    flex-direction: column;
+}
+ .stat, .about{
+    display: none;
+    flex-direction: column;
+}
+header{
+    width: 100%;
+    height: 50px;
+    color: #F6F4F3;
+    display: flex;
+    position: sticky;
+    z-index: 2;
+    top: 0;
+    /* background-color: #011936; */
+}
+header a{
+    /* color: #F6F4F3; */
+    color:#011936;
+}
+header .user{
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+}
+.navbar{
+    position: absolute;
+    right: 10px;
+    padding: 15px 0; 
+    
+}
+/* mettre les navbar cote à cote */
+.navbar .link{
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
+.navbar .link span{
+    margin-right: 40px;
+    position: relative;
+}
+.navbar .link a{
+    padding: 10px; 
+}
+.select-container{
+    margin: 10px;
+}
+.benefice-container{
+    display: flex;
+    font-size: 25px;
+    margin: 10px;
+    
+}
+.benefice-total{
+    color: green;
+    margin: 0 3px;
+}
+table{
+    width: 100%;
+}
+tr,td{
+    outline: 1px solid rgb(167, 166, 166);
+    padding: 5px;
+    text-align: center;
+}
+
+.titre{
+    color: #fff;
+    background: #424874;
+    font-size: 1.2rem;
+    font-weight: bold; 
+    padding: 5px;
+}
+.trace-row{
+    width: 100%;
+    display: none;
+}
+.trace-row td{
+    height: 50px;
+    align-items: center;
+    display: revert;
+}
+.btn-container{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 10px;
+}
+.preview, .next{
+    width: 90px;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+}
+.next:hover, .preview:hover{
+    background: #424874;
+    color: #fff;
+}
+.stat{
+    
+    align-items: center;
+}
+.benefice-region-chart, .benefice-year-chart{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+    cursor: pointer;
+}

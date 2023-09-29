@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    
+    <title>Sales_100</title>
+</head>
+<body>
+    <header id="header">
+        <nav class="navbar" >
+                <div class="link ">
+                    <span class="link-button"><a href="#" id="home-link">Home</a></span>
+                    <span class="link-button"> <a href="#about" id="about-link">About</a></span>
+                    <span class="link-button"><a href="#competence" id="skill-link">Stat</a></span>
+                </div>
+        </nav>
+    </header>
+
+    <section class="home-page">
+        <div class="chiffre-container">
+            <div class="benefice-container">
+                Bénéfice total: <span id="benefice-total"  class="benefice-total"> </span> £
+            </div>
+            <div class="marchandise-container benefice-container">
+                Nombres totals des marchandises: <span id="marchandise-total"  class="benefice-total"> </span> pièces 
+            </div>
+    
+            <div class="select-container">
+                <label for="">Région:</label>
+                <select name="Region" id="" class="region">
+                    <option value="tous">Tous</option>
+                </select>
+                <label for="">Sales channel:</label>
+                <select name="Region" class="sales-channel">
+                    <option value="tous" class="channel-option">Tous</option>
+                </select>
+            </div>
+        
+        </div>
+        <table>
+            <thead>
+                <tr class="tr-titre">
+                    <td class="titre">Order id</td>
+                    <td class="titre">Région</td>
+                    <td class="titre">Country</td>
+                    <td class="titre">Item type</td>
+                    <td class="titre">Sales channel</td>
+                    <td class="titre">Order date</td>
+                    <td class="titre">Ship date</td>
+                    <td class="titre">Units sold</td>
+                    <td class="titre">Unit price</td>
+                    <td class="titre">Unit cost</td>
+                    <td class="titre">Bénéfice total</td>
+                </tr>
+            </thead>
+            <tbody></tbody>
+          
+        </table>
+        <div class="btn-container">
+                <button class="preview">Précedent</button>
+                <button class="next">Suivant</button>
+        </div>
+    
+    </section>
+    <section class="about">
+
+    </section>
+    <section class="stat">
+                <div class="benefice-region-chart">
+                    <h2>Bénéfice par region</h2>
+                    <canvas id="myChart"></canvas>
+                </div>
+                <div class="benefice-year-chart">
+                    <!-- <h2>Bénéfice par an</h2> -->
+                    <canvas id="myChart-year"></canvas>
+                </div>
+                
+            
+    </section>
+        <!-- </div> -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="./assets/js/index.js" ></script>
+</body>
+</html>
