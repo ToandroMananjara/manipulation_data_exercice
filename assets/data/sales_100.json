@@ -1,5 +1,17 @@
 {
 "sales_100": [
+	{
+		"order_id" : 114606559,
+		"region" : "Sub-Saharan Africa",
+		"country" : "Cote d'Ivoire",
+		"item_type" : "Clothes",
+		"sales_channel" : "Online",
+		"order_date" : "2012-06-08T00:00:00Z",
+		"ship_date" : "2012-06-27T00:00:00Z",
+		"units_sold" : 3482,
+		"unit_price" : 109,
+		"unit_cost" : 36
+	},
 
 	{
 		"order_id" : 115456712,

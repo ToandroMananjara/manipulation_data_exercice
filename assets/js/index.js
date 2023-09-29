@@ -341,6 +341,14 @@ fetch("./assets/data/sales_100.json")
               }
             }
         });
+        // let statLink = document.querySelector('.stat-link');
+        // let statLinks = document.querySelectorAll('.stat-none');
+        // statLink.addEventListener('click', () => {
+        //     statLinks.forEach(element =>{
+        //         element.classList.toggle('stat-link-toggle');
+        //     })
+        // })
+        
     });
 
 

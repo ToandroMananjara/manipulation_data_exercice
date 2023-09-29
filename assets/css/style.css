@@ -45,7 +45,7 @@ header .user{
 /* mettre les navbar cote à cote */
 .navbar .link{
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     margin: auto;
 }
 .navbar .link span{
@@ -115,9 +115,22 @@ tr,td{
     align-items: center;
 }
 .benefice-region-chart, .benefice-year-chart{
+    width: 500px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 500px;
+    justify-content: end;
     cursor: pointer;
-}
+    margin: 10px ;
+ }
+ /* .stat-link{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+ }
+ .stat-none{
+    display: none;
+ }
+ .stat-link-toggle{
+    display: block;
+ } */
