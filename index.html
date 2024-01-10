@@ -3,12 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <script type="module" src="./assets/main/index.js" defer></script>
     
-    <title>Sales_100</title>
+
+    <title>Sales</title>
 </head>
 <body>
     <header id="header">
+    
         <nav class="navbar" >
                 <div class="link ">
                     <span class="link-button"><a href="#" id="home-link">Home</a></span>
@@ -21,71 +26,55 @@
                     
                 </div>
         </nav>
+        <div class="search-container">
+            <label for="input-search">Recherche dans le item_type</label><br>
+            <input type="text" id="input-search" placeholder="recherche dans item_type">
+            <!-- <button id="button-search"> Search </button> -->
+        </div>
     </header>
-
-    <section class="home-page">
-        <div class="chiffre-container">
-            <div class="benefice-container">
-                Bénéfice total: <span id="benefice-total"  class="benefice-total"> </span> £
-            </div>
-            <div class="marchandise-container benefice-container">
-                Nombres totals des marchandises: <span id="marchandise-total"  class="benefice-total"> </span> pièces 
-            </div>
     
-            <div class="select-container">
-                <label for="">Région:</label>
-                <select name="Region" id="" class="region">
-                    <option value="tous">Tous</option>
-                </select>
-                <label for="">Sales channel:</label>
-                <select name="Region" class="sales-channel">
-                    <option value="tous" class="channel-option">Tous</option>
-                </select>
-            </div>
-        
-        </div>
-        <table>
-            <thead>
-                <tr class="tr-titre">
-                    <td class="titre">Order id</td>
-                    <td class="titre">Région</td>
-                    <td class="titre">Country</td>
-                    <td class="titre">Item type</td>
-                    <td class="titre">Sales channel</td>
-                    <td class="titre">Order date</td>
-                    <td class="titre">Ship date</td>
-                    <td class="titre">Units sold</td>
-                    <td class="titre">Unit price</td>
-                    <td class="titre">Unit cost</td>
-                    <td class="titre">Bénéfice total</td>
-                </tr>
-            </thead>
-            <tbody></tbody>
-          
-        </table>
-        <div class="btn-container">
-                <button class="preview">Précedent</button>
-                <button class="next">Suivant</button>
-        </div>
-    
-    </section>
-    <section class="about">
-
-    </section>
-    <section class="stat">
-                <div class="benefice-region-chart">
-                    <h2>Bénéfice par region</h2>
-                    <canvas id="myChart"></canvas>
+    <section class="home">
+        <div class="header">
+            <div class="chiffre-container">
+                <div class="benefice-container">
+                    Bénéfice total: <span id="benefice-total"  class="benefice-total"></span> £
                 </div>
-                <div class="benefice-year-chart">
-                    <!-- <h2>Bénéfice par an</h2> -->
-                    <canvas id="myChart-year"></canvas>
+                <div class="marchandise-container benefice-container">
+                    Nombres totals des marchandises: <span id="marchandise-total"  class="marchandise-total"> </span> pièces 
+                </div>
+        
+                <div class="select-container">
+                    <label for="">Région:</label>
+                    <select name="Region" id="" class="region">
+                        <option value="tous">Tous</option>
+                    </select>
+                    <label for="">Sales channel:</label>
+                    <select name="Region" class="sales-channel">
+                        <option value="tous" class="channel-option">Tous</option>
+                    </select>
                 </div>
                 
             
+            </div>
+
+        </div>
+        <div class="container">
+            <div class="container-click">
+    
+            </div>
+        </div>
+        <div class="btn-container">
+            <button class="preview">Précedent</button>
+            <button class="next">Suivant</button>
+        </div>
+    
     </section>
-        <!-- </div> -->
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-        <script src="./assets/js/index.js" ></script>
+    <section class="about"></section>
+    <section class="stat">
+        <h4 class="legende-par-year">Courbe de la benefice par an</h4>
+    </section>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer ></script>  
 </body>
 </html>
