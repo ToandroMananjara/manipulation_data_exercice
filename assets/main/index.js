@@ -131,6 +131,7 @@ fetch('../assets/data/sales_100.json')
             })
             container?.querySelector('p')?.remove()
             if (selectChannel.value === 'tous') {
+                console.log('tous');
                 newRegion.forEach(data => {
                     container.append(new SalesList(data))   
                 }); 
@@ -151,7 +152,7 @@ fetch('../assets/data/sales_100.json')
                     container.append(new SalesList(data))   
                 }); 
             }       
-            if(!newSalesChannels.length){
+            if(!newSalesChannels?.length){
                 let noResultsMessage = document.createElement('p');
                 noResultsMessage.textContent = 'Aucun résultat '
                 container.appendChild(noResultsMessage);

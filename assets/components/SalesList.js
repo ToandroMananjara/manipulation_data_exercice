@@ -7,7 +7,9 @@ export class SalesList extends HTMLElement{
         this.addEventListener('click', ()=>{
             this.container = document.querySelector('.container-click')
             this.clickItem()
-            this.container.querySelector('.closed').addEventListener('click',()=> this.closed())
+            this.container.querySelector('.closed').addEventListener('click',()=>{
+                this.closed()
+            })
         })
     }
     
@@ -54,7 +56,16 @@ export class SalesList extends HTMLElement{
                     color: #FFD400;
                 }
                 .new-card{
-                    
+                    width: 80%;
+                    position: fixed;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    background: #F6F4F3;
+                    border-radius: 15px;
+                    margin: 15px;
+                    padding: 30px 0;  
+                    cursor: pointer; 
                 }
                 .closed{
                     position: absolute;
@@ -77,6 +88,7 @@ export class SalesList extends HTMLElement{
                     }
                 }
         </style>
+        
         <div class= "new-card">
             <span class="closed"><i class="fa-solid fa-x"></i></span>
             <span class="id card-item"><span class="title" > Id </span> : <span>${this.data.order_id}</span></span>
@@ -96,8 +108,8 @@ export class SalesList extends HTMLElement{
     clickItem(){
         this.clickRender()
         this.container.style.display = 'flex'
-        this.container.style.zIndex = 2
-        this.container.style.position = 'absolute'
+        // this.container.style.zIndex = 7
+        // this.container.style.position = 'fixed'
     }
     closed(){
         this.container.innerHTML = ''
