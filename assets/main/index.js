@@ -89,7 +89,8 @@ fetch('../assets/data/sales_100.json')
         const triRegion = (array, region) => {
             return array.filter((arr)=> arr.region === region);           
           }
-          
+        
+        
         selectRegion.addEventListener('click', ()=> {
             container.querySelectorAll('sale-list').forEach(element=>{
                 element.remove()
@@ -125,18 +126,29 @@ fetch('../assets/data/sales_100.json')
         })
 
         selectChannel.addEventListener('change', () => {
-            let newSalesChannels;
+            let newSalesChannels = [];
             container.querySelectorAll('sale-list').forEach(element=>{
                 element.remove()
             })
             container?.querySelector('p')?.remove()
             if (selectChannel.value === 'tous') {
-                console.log('tous');
-                newRegion.forEach(data => {
-                    container.append(new SalesList(data))   
-                }); 
-                console.log(newRegion);
-              
+                if (selectRegion.value === 'tous') {
+                    datas.forEach((arr) => {
+                        newSalesChannels.push(arr)
+                    })
+                    newSalesChannels.forEach(data => {
+                        container.append(new SalesList(data))   
+                    }); 
+                }
+                else{
+                    newRegion.forEach((arr) => {
+                        newSalesChannels.push(arr)
+                    })
+                    console.log(newSalesChannels);
+                    newRegion.forEach(data => {
+                        container.append(new SalesList(data))   
+                    }); 
+                }
             }
             if (selectChannel.value === 'Offline') {
                 console.log(newRegion);
