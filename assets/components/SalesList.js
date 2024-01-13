@@ -61,6 +61,9 @@ export class SalesList extends HTMLElement{
                     top: 50%;
                     left: 50%;
                     transform: translate(-50%, -50%);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
                     background: #F6F4F3;
                     border-radius: 15px;
                     margin: 15px;
@@ -90,6 +93,7 @@ export class SalesList extends HTMLElement{
         </style>
         
         <div class= "new-card">
+            <div>
             <span class="closed"><i class="fa-solid fa-x"></i></span>
             <span class="id card-item"><span class="title" > Id </span> : <span>${this.data.order_id}</span></span>
             <span class="region card-item"><span class="title">Region </span> : <span class="data-region">${this.data.region}</span></span>
@@ -101,6 +105,8 @@ export class SalesList extends HTMLElement{
             <span class="unit-cost card-item"><span class="title">Unit-cost </span>: <span>${this.data.unit_cost}</span></span>
             <span class="unit-price card-item"><span class="title">Unit-price </span>: <span>${this.data.unit_price}</span></span>
             <span class="units-sold card-item"><span class="title">Units-sold </span>: <span>${this.data.units_sold}</span></span>
+            </div>
+            
         </div>
         
     `;
